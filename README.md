@@ -20,7 +20,7 @@ Please cite the paper as:
 
 ## Data
 
-The edge data for large graphs can be downloaded [here]([https://link-url-here.org](https://drive.google.com/drive/folders/1n9IyxSiyImM4Oa_9WIWL85FHK8PsbDrp?usp=sharing)).
+The edge data for large graphs can be downloaded [here](https://drive.google.com/drive/folders/1n9IyxSiyImM4Oa_9WIWL85FHK8PsbDrp?usp=sharing).
 
 ## Usage
 1. To generate the C++ program for random walk, run the following command :
