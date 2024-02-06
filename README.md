@@ -18,6 +18,9 @@ Please cite the paper as:
       organization={Springer}
     }
 
+## Data
+
+The edge data for large graphs can be downloaded [here]([https://link-url-here.org](https://drive.google.com/drive/folders/1n9IyxSiyImM4Oa_9WIWL85FHK8PsbDrp?usp=sharing)).
 
 ## Usage
 1. To generate the C++ program for random walk, run the following command :
@@ -28,8 +31,6 @@ Please cite the paper as:
 
 `pip install -r requirements.txt`
 
-3. Unzip the datasets in the "data" folder
-
-4. Run the code with following command:
+3. Run the code with following command:
 
 `python main.py --dataset DATA`
