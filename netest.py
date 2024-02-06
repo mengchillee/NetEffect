@@ -15,6 +15,7 @@ def check_cm(H_h):
         H_h[i] /= H_h[i].sum()
     return H_h - 1 / c
 
+
 def fast_cm(A, B_h, prior):
     n, c = B_h.shape
     PQ = csr_matrix(kron(np.identity(c), A @ B_h))
@@ -36,6 +37,7 @@ def fast_cm(A, B_h, prior):
     
     H_h = reg.coef_.reshape(c, c).T
     return csr_matrix(check_cm(H_h))
+
 
 def fast_cm_hom(A, B_h, prior, cnum=[]):
     n, c = B_h.shape
@@ -77,6 +79,7 @@ def fast_cm_hom(A, B_h, prior, cnum=[]):
             c2 += 1
     H_h = np.array(H_h).T - 1 / c
     return csr_matrix(check_cm(H_h))
+
 
 def net_effect_test(A, labels, prior):
     c = np.max(labels) + 1
