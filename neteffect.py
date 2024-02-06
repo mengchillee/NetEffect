@@ -15,6 +15,7 @@ def degree_matrix(A, p=1):
     D.setdiag(diag)
     return csr_matrix(D)
 
+
 def random_walk_matrix(A, T, trials):
     neighbors = defaultdict(list)
     for ii, jj in zip(*A.nonzero()):
@@ -31,6 +32,7 @@ def random_walk_matrix(A, T, trials):
     S[index] = list(walks_arr.values())
     return S
 
+
 def proximity_matrix(A, T, trials=30):
     A = csr_matrix(A, copy=True)
     S = random_walk_matrix(A, T, trials)
@@ -39,6 +41,7 @@ def proximity_matrix(A, T, trials=30):
     nz = S.nonzero()
     S[nz] = np.log(S[nz])
     return csr_matrix(S)
+
 
 def euclidean_matrix(A, X):
     S, index, dis_arr = lil_matrix(A.shape), ([], []), []
@@ -51,12 +54,14 @@ def euclidean_matrix(A, X):
     S[index] = np.repeat(np.exp(dis_arr), 2)
     return csr_matrix(S)
 
+
 def emphasis_matrix(A, T=4, trials=10, rank=128, random_state=None):
     W = proximity_matrix(A, T=T, trials=trials)
     X, s, _ = randomized_svd(W, rank, n_iter=2, random_state=random_state)
     for r, ss in enumerate(np.sqrt(s)):
         X[:, r] *= ss
     return euclidean_matrix(A, X)
+
 
 def NetEffect(A, labels, prior, est=False, em=False, rank=128, T=4, trials=30):
     n, c = A.shape[0], np.max(labels) + 1
