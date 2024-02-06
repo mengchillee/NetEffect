@@ -14,6 +14,7 @@ def accuracy(labels, prior, pred):
     idx = [i for i in range(len(labels)) if i not in prior]
     return accuracy_score(labels[idx], pred[idx])
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, default='fb',
                     help='Name of input dataset')
