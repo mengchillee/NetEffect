@@ -7,7 +7,7 @@ from tqdm import tqdm
 from scipy.sparse import csr_matrix
 from sklearn.metrics import accuracy_score
 
-from neteffect import NetEffect
+from neteffect import NetEffecf
 
 
 def accuracy(labels, prior, pred):
