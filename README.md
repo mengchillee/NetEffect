@@ -10,7 +10,7 @@ https://arxiv.org/abs/2301.00270
 
 Please cite the paper as:
 
-    @inproceedings{lee2021InfoShield,
+    @inproceedings{lee2024NetEffect,
       title={NetEffect: Discovery and Exploitation of Generalized Network Effects},
       author={Lee, Meng-Chieh and Shekhar, Shubhranshu and Yoo, Jaemin and Faloutsos, Christos},
       booktitle={Pacific-Asia Conference on Knowledge Discovery and Data Mining},
